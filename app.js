@@ -8,7 +8,6 @@ function initState() {
   $('.shopping-list').find('.shopping-item').each(function() {
     addItem(state, $(this).text());
   });
-  //console.log(state);
   return state;
 }
 
@@ -50,7 +49,6 @@ $(function main() {
 
   $('.shopping-list').on('click', '.shopping-item-delete', function() {
     let index = $(this).parent().index('.shopping-item-controls');
-    console.log(index);
     removeItem(state, index);
     renderRemoveItem(index, 'li');
   });
