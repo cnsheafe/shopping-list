@@ -48,7 +48,7 @@ $(function main() {
     renderAddItem(state, '.shopping-list');
   });
 
-  $('.shopping-item-controls').on('click', '.shopping-item-delete', function() {
+  $('.shopping-list').on('click', '.shopping-item-delete', function() {
     let index = $(this).parent().index('.shopping-item-controls');
     console.log(index);
     removeItem(state, index);
