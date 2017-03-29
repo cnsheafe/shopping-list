@@ -52,4 +52,8 @@ $(function main() {
     removeItem(state, index);
     renderRemoveItem(index, 'li');
   });
+
+  $('.shopping-list').on('click', '.shopping-item-toggle', function() {
+    $(this).parent().prev().toggleClass('shopping-item__checked');
+  });
 });
