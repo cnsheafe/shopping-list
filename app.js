@@ -40,8 +40,8 @@ $(function main() {
 
   let state = initState();
 
-  $('form').on('submit', function(ev) {
-    ev.preventDefault();
+  $('form').on('submit', function(event) {
+    event.preventDefault();
     const textInput = $(this).serializeArray()[0].value;
     addItem(state, textInput);
     renderAddItem(state, '.shopping-list');
@@ -57,3 +57,5 @@ $(function main() {
     $(this).parent().prev().toggleClass('shopping-item__checked');
   });
 });
+
+// Alvin says this deserves an ---> A++++++++++++
